@@ -1,0 +1,29 @@
+{% extends 'cruise/base.html' %}
+
+{% block content %}
+    <div class="album py-5 bg-light">
+        <div class="container">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    {{ object.ship }}
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>{{ object.text }}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+<div class="col">
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+            <p class="card-text">{{ object.name }}</p>
+            <p class="card-text">{{ object.ship.name }}</p>
+            <p class="card-text">Начало: {{ object.data_start }}</p>
+            <p class="card-text">Конец: {{ object.date_finish }}</p>
+        </div>
+        <div class="card-body">
+            <div class="card-footer">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <a type="button" class="btn btn-sm btn-outline-secondary" href="#">Подробнее</a>
+                        <a type="button" class="btn btn-sm btn-outline-secondary" href="#">Изменить</a>
+                        <a type="button" class="btn btn-sm btn-outline-danger" href="#">Удалить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
