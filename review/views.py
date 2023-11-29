@@ -14,6 +14,17 @@ class ReviewCreateView(CreateView):
     form_class = ReviewForm
     success_url = reverse_lazy('review:list')
 
+    def form_valid(self, form):
+        """
+        Привязывает пользователя к отзыву
+        """
+        if form.is_valid():
+            self.object = form.save()
+            self.object.owner = self.request.user
+            self.object.save()
+
+        return super().form_valid(form)
+
 
 class ReviewListView(ListView):
     """
@@ -24,7 +35,7 @@ class ReviewListView(ListView):
 
 class ReviewUpdateView(UpdateView):
     """
-    Позволяет изменить существующие статьи
+    Позволяет изменить существующие отзывы
     """
     model = Review
     form_class = ReviewForm
@@ -36,14 +47,14 @@ class ReviewUpdateView(UpdateView):
 
 class ReviewDetailView(DetailView):
     """
-    Выводит статью целиком
+    Выводит отзыв целиком
     """
     model = Review
 
 
 class ReviewDeleteView(DeleteView):
     """
-    Удаляет элемент
+    Удаляет отзыв
     """
     model = Review
-    success_url = reverse_lazy('review:list')
+    success_url = reverse_lazy('review:cruise')
