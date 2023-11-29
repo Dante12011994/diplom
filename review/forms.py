@@ -6,8 +6,8 @@ from cruise.forms import StyleFormMixin
 
 class ReviewForm(StyleFormMixin, forms.ModelForm):
     """
-    Форма для создания и изменения статей отзыва
+    Форма для создания и изменения отзыва
     """
     class Meta:
         model = Review
-        fields = "__all__"
+        fields = ('ship', 'text')

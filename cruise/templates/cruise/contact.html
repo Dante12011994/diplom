@@ -1,0 +1,49 @@
+{% extends 'cruise/base.html' %}
+
+{% block content %}
+
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">НАШИ КОНТАКТЫ</h1>
+        </div>
+    </div>
+</section>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 g-2">
+            <div class="col">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <form method="POST">
+                            <h3>Hапишите нам</h3>
+                            {% csrf_token %}
+                            <input class="form-control mb-2" name="name">
+                            <input class="form-control mb-2" name="email">
+                            <textarea class="form-control mb-2" name="massage"></textarea>
+                            <button type="submit" class="btn btn-primary form-control">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card border-light">
+                    <div class="card-body">
+                        <p class="card-text">
+                            Адрес:          г.Москва, Случайный переулок д.23<br>
+                            Телефон:        8-800-333-22-11<br>
+                            Факс:           8-800-777-66-55<br>
+                            Время работы:   пн-вс 09:00 - 18:00 <br>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

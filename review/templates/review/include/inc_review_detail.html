@@ -7,8 +7,10 @@
                 <div class="btn-group">
                     <a type="button" class="btn btn-sm btn-outline-secondary" href="{% url 'review:view' object.pk %}">Подробнеe
                     </a>
+                    {% if user.is_superuser or user == object.owner %}
                     <a type="button" class="btn btn-sm btn-outline-secondary" href="{% url 'review:edit' object.pk %}">Изменить</a>
                     <a type="button" class="btn btn-sm btn-outline-danger" href="{% url 'review:delete' object.pk %}">Удалить</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
