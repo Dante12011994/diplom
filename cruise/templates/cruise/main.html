@@ -15,7 +15,22 @@
 </section>
 <div class="album py-5 bg-light">
     <div class="container">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                НАШИ КРУИЗЫ
+                            </h4>
+                        </div>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {% for object in cruise_list %}
             {% include 'cruise/include/inc_cruise_detail.html' %}
@@ -25,7 +40,22 @@
 </div>
 <div class="album py-5 bg-light">
     <div class="container">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                НАШИ ТЕПЛОХОДЫ
+                            </h4>
+                        </div>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
             {% for object in ship_list %}
             {% include 'cruise/include/inc_ship_detail.html' %}
