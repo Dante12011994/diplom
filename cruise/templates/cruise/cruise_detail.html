@@ -36,24 +36,50 @@
                                 </tr>
                             </table>
                         </div>
-                        {% for prise in object.prise.all %}
-                        <div class="card-body">
-                            <table class="table">
-                                <tr>
-                                    <td>Начало: {{ object.data_start }}</td>
-                                </tr>
-                                <tr>
-                                    <td>Конец: {{ object.date_finish }}</td>
-                                </tr>
-
-                            </table>
-                        </div>
-                        {% endfor %}
                     </div>
                 </div>
-
             </div>
         </div>
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    {% for price in object.prices.all %}
+                    <div class="col">
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>Класс каюты: {{ price.name }}<br>
+                                            Цена: {{ price.prise }} руб.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Для приобретения путевки свяжитесь с нами
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                Для приобретения путевки заполните заявку обратной связи во вкладке "Контакты"
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 

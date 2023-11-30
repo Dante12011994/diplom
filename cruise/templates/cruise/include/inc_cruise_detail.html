@@ -14,8 +14,10 @@
                         <a type="button" class="btn btn-sm btn-outline-secondary"
                            href="{% url 'cruise:cruise_view' object.pk %}">Подробнее</a>
                         {% if user.is_authenticated and user.is_superuser %}
-                        <a type="button" class="btn btn-sm btn-outline-secondary" href="{% url 'cruise:cruise_edit' object.pk %}">Изменить</a>
-                        <a type="button" class="btn btn-sm btn-outline-danger" href="{% url 'cruise:cruise_delete' object.pk %}">Удалить</a>
+                        <a type="button" class="btn btn-sm btn-outline-secondary"
+                           href="{% url 'cruise:cruise_edit' object.pk %}">Изменить</a>
+                        <a type="button" class="btn btn-sm btn-outline-danger"
+                           href="{% url 'cruise:cruise_delete' object.pk %}">Удалить</a>
                         {% endif %}
                     </div>
 

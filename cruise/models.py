@@ -47,7 +47,7 @@ class Prise(models.Model):
     """
     CLASS = [('standart', 'стандартная каюта'), ('deluxe', 'каюта де-люкс'), ('luxe', 'каюта люкс')]
     name = models.CharField(max_length=8, choices=CLASS, verbose_name='Класс каюты')
-    cruise = models.ForeignKey(Cruise, on_delete=models.CASCADE, verbose_name='Круиз')
+    cruise = models.ForeignKey(Cruise, on_delete=models.CASCADE, verbose_name='Круиз',related_name='prices')
     prise = models.PositiveIntegerField(verbose_name='Стоимость')
 
     def __str__(self):
