@@ -7,8 +7,8 @@ from cruise.models import Cruise, Ships
 
 
 def main(request):
-    cruise_list = Cruise.objects.filter(status_cruise='create')
-    ship_list = Ships.objects.all()
+    cruise_list = Cruise.objects.filter(status_cruise='create').order_by('?')[:3]
+    ship_list = Ships.objects.order_by('?')[:3]
     context = {
         "cruise_list": cruise_list,
         "ship_list": ship_list
