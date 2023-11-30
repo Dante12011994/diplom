@@ -10,7 +10,8 @@ class Review(models.Model):
     """
     Модель отзывов о теплоходе
     """
-    ship = models.ForeignKey(Ships, on_delete=models.SET_NULL, null=True, verbose_name='Теплоход')
+    ship = models.ForeignKey(Ships, on_delete=models.SET_NULL, null=True, verbose_name='Теплоход',
+                             related_name='review')
     text = models.TextField(verbose_name='Отзыв')
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, **NULLABLE)
 

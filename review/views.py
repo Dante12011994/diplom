@@ -57,4 +57,4 @@ class ReviewDeleteView(DeleteView):
     Удаляет отзыв
     """
     model = Review
-    success_url = reverse_lazy('review:cruise')
+    success_url = reverse_lazy('review:list')
